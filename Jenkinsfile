@@ -11,7 +11,7 @@ def setupScript = null
 mavenNode {
   checkout scm
   if (utils.isCI()) {
-
+    echo "CI build is here"
     mavenCI {
         integrationTestCmd =
          "mvn org.apache.maven.plugins:maven-failsafe-plugin:integration-test \
